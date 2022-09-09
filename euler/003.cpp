@@ -1,3 +1,26 @@
+// Project Euler #3: Largest prime factor
+/*
+The prime factors of 13195 are 5, 7, 13 and 29.
+What is the largest prime factor of a given number N?
+*/
+
+/*
+    # Approach to solve it
+    1. Divide given number by 2 until it is not divisibe
+       (Remainder = 0) by 2, and set largest prime number 
+       to 2 (initially).
+    2. Run a loop from 3 to square root of given number, and 
+       iterator should increase by 2 in each round of loop.
+       (Because there exist only 1 even prime (2) and rest is odd)
+    3. In each iteration if given number is divisble by iterator,
+       set largest prime number to by iterator and then divide
+       given number by iterator till it is not divisible
+       (remainder != 0) by that iterator.
+    4. If given number (after being divided in above process)
+       turnout to be greater than 2, then set original given
+       number to largest prime number.
+*/
+
 #include <map>
 #include <set>
 #include <list>
